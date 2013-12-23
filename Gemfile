@@ -34,7 +34,7 @@ end
 
 # learn-rails
 
-gem 'activerecord_tableless'
+gem 'activerecord-tableless'
 gem 'compass-rails'
 gem 'figaro'
 gem 'gibbon'
@@ -44,6 +44,9 @@ gem 'simple_form'
 gem 'zurb-foundation'
 
 group :development do
+  # for better errors to work on nitrous.io set
+  # BetterErrors::Middleware.Allow_ip!"0.0.0.0/0" 
+  # in the 
   gem 'better_errors'
   gem 'quiet_assets'
   gem 'rails_layout'
