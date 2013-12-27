@@ -47,9 +47,16 @@ group :development do
   # for better errors to work on nitrous.io set
   # BetterErrors::Middleware.Allow_ip!"0.0.0.0/0" 
   # in the 
+  gem 'sqlite3'
   gem 'better_errors'
   gem 'quiet_assets'
   gem 'rails_layout'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+  gem 'thin'
 end
 
 # Use ActiveModel has_secure_password
