@@ -35,21 +35,28 @@ end
 # learn-rails
 
 gem 'activerecord-tableless'
-gem 'compass-rails'
+gem 'compass-rails', '~> 1.1.2'
 gem 'figaro'
 gem 'gibbon'
 gem 'google_drive'
 gem 'high_voltage'
 gem 'simple_form'
-gem 'zurb-foundation'
+gem 'zurb-foundation', '~> 4.3.2'
 
 group :development do
   # for better errors to work on nitrous.io set
   # BetterErrors::Middleware.Allow_ip!"0.0.0.0/0" 
   # in the 
+  gem 'sqlite3'
   gem 'better_errors'
   gem 'quiet_assets'
   gem 'rails_layout'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+  gem 'thin'
 end
 
 # Use ActiveModel has_secure_password
